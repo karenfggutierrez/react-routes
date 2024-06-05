@@ -48,3 +48,7 @@ For any questions, please contact me via LinkedIn.
 **Activity and Work History:**
 
 Please update your work here with timestamp if possible.
+
+* June 5 3PM-5PM: Reading and understanding of the project and recquirements.
+
+* June 5 5PM-6PM: Clone repository and project testing.
