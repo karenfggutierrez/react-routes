@@ -19,6 +19,7 @@ export function Login() {
 
         setError(false)
 
+        //localStorage.clear();
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('token', JSON.stringify(password));
         navigate('/movies');
