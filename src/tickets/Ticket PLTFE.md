@@ -6,7 +6,7 @@ OPEN Jun 5th, 2024
 
 **Assignee:**
 
-Karen Gonzales
+Karen Gonzalez
 
 **Reporter:**
 
@@ -52,3 +52,7 @@ Please update your work here with timestamp if possible.
 * June 5 3PM-5PM: Reading and understanding of the project and recquirements.
 
 * June 5 5PM-6PM: Clone repository and project testing.
+
+* June 6 3PM-4PM: Research of concepts
+
+* June 6 4PM-6PM: Implementation and start writing code

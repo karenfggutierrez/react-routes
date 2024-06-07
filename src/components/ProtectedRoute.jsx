@@ -1,15 +1,13 @@
-import React from 'react';
-import { Navigate, Outlet } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
-const ProtectedRoute = ({
-    canActivate,
-    redirectPath = '/login'
-}) => {
-    console.log("canActivate: " + canActivate);
-    if (!!canActivate) {
-        return <Navigate to={redirectPath} replace />
-    }
-    return <Outlet />;
-}
+const ProtectedRoute = ({ children }) => {
+  const { user } = useAuth();
+  if (!user) {
+    //The user is not authenticated
+    return <Navigate to="/login" />;
+  }
+  return children;
+};
 
 export default ProtectedRoute;

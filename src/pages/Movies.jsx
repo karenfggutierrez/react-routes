@@ -1,23 +1,23 @@
 import React from 'react';
-import { NavLink, useNavigate } from "react-router-dom";
-export function Movies() {
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
+
+export const Movies = () => {
 
     const navigate = useNavigate();
+    const { logout } = useAuth();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        localStorage.clear();
-        navigate('/login');
-
+        const handleLogout = () => {
+            logout();
+        
+        //localStorage.clear();
         console.log("Logged out :)!!!!");
-    }
+    };
 
     return (
         <div>
             <h1>Movies</h1>
-            {/* <NavLink to="/login" >Logout</NavLink> */}
-            <button onClick={handleSubmit}>Logout</button>
+            <button onClick={handleLogout}>Logout</button>
         </div>
     )
-}
+};

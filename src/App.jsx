@@ -1,32 +1,31 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { useLocalStorage } from 'react-use';
 import './App.css';
 
 import { Home } from './pages/Home';
-import { Login } from './pages/Login';
+import { LoginPage } from './pages/Login';
 import { About } from './pages/About';
 import { Page404 } from './pages/Page404';
 import { Movies } from './pages/Movies';
 import ProtectedRoute from './components/ProtectedRoute';
+import { AuthProvider, useAuth } from './hooks/useAuth';
 
 function App() {
 
-  const [user, setUSer] = useLocalStorage('user');
-  console.log("The user" + user);
+  //const [user, setUSer] = useLocalStorage('user');
+  //console.log("The user" + user);
 
   return (
-    <BrowserRouter>
+    <AuthProvider>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route element={<ProtectedRoute canActivate={user} redirectPath='/login' />}>
-          <Route path='/about' element={<About />} />
-          <Route path='/movies' element={<Movies />} />
-        </Route>
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/about' element={<ProtectedRoute> <About /> </ProtectedRoute>} />
+        <Route path='/movies' element={<ProtectedRoute> <Movies /> </ProtectedRoute>} />
         <Route path='*' element={<Page404 />} />
       </Routes>
-    </BrowserRouter>
+    </AuthProvider>
   )
 }
 
