@@ -56,3 +56,7 @@ Please update your work here with timestamp if possible.
 * June 6 3PM-4PM: Research of concepts
 
 * June 6 4PM-6PM: Implementation and start writing code
+
+* June 7 2PM-4PM: Testing the project with defined authentication user and password
+
+* June 7 4PM-6PM: Understanding of local storage and Storing user & password in localStorage while logged in. Clearing local storage when logged out.

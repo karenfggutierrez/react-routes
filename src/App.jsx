@@ -13,9 +13,6 @@ import { AuthProvider, useAuth } from './hooks/useAuth';
 
 function App() {
 
-  //const [user, setUSer] = useLocalStorage('user');
-  //console.log("The user" + user);
-
   return (
     <AuthProvider>
       <Routes>

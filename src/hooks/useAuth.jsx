@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }) => {
         navigate("/", { replace: true });
       };
 
-      //To cache the results
       const value = useMemo(
         () => ({
           user,
