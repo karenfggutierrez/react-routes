@@ -9,7 +9,8 @@ import { About } from './pages/About';
 import { Page404 } from './pages/Page404';
 import { Movies } from './pages/Movies';
 import ProtectedRoute from './components/ProtectedRoute';
-import { AuthProvider, useAuth } from './hooks/useAuth';
+import PublicRoute from './components/PublicRoute';
+import { AuthProvider, noAuth } from './hooks/useAuth';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     <AuthProvider>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/login' element={<LoginPage />} />
+        <Route path='/login' element={<PublicRoute> <LoginPage/> </PublicRoute>} />
         <Route path='/about' element={<ProtectedRoute> <About /> </ProtectedRoute>} />
         <Route path='/movies' element={<ProtectedRoute> <Movies /> </ProtectedRoute>} />
         <Route path='*' element={<Page404 />} />

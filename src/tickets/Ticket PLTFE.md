@@ -60,3 +60,5 @@ Please update your work here with timestamp if possible.
 * June 7 2PM-4PM: Testing the project with defined authentication user and password
 
 * June 7 4PM-6PM: Understanding of local storage and Storing user & password in localStorage while logged in. Clearing local storage when logged out.
+
+* June 10 5PM-6PM: Applied PublicRoute for prevention of loading login while authenticated.
