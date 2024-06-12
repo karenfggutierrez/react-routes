@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useLocalStorage } from 'react-use';
 import './App.css';
 
 import { Home } from './pages/Home';
@@ -10,7 +9,7 @@ import { Page404 } from './pages/Page404';
 import { Movies } from './pages/Movies';
 import ProtectedRoute from './components/ProtectedRoute';
 import PublicRoute from './components/PublicRoute';
-import { AuthProvider, noAuth } from './hooks/useAuth';
+import { AuthProvider } from './hooks/useAuth';
 
 function App() {
 
